@@ -225,15 +225,14 @@ recovery was judged by hand after simplification.
 DragonSR was developed as an extension of DRAGON (Keisler et al., *JMLR* 2024) during a
 research internship at INRIA Paris. The library code in `dragon/` is the exact version the
 paper's runs used (the `dragonsr-experiments` branch of
-[how2222/DRAGON](https://github.com/how2222/DRAGON), with unrelated experimental modules
-removed). A cleaner integration of the symbolic-regression components into upstream
-DRAGON, with tutorial notebooks, is being prepared by Julie Keisler on the
+[how2222/DRAGON](https://github.com/how2222/DRAGON)). A cleaner integration of the symbolic-regression components into upstream
+DRAGON, with tutorial notebooks, is on the Julie Keisler's
 [`sr_to_dragon`](https://github.com/JulieKeisler/DRAGON/tree/sr_to_dragon) branch.
 
 ## Citation
 
 ```bibtex
-@article{chikhaoui2026dragonsr,
+@article{dragonsr2026,
   title   = {DragonSR: Directed Acyclic Graph Search for Equation Discovery},
   author  = {Chikhaoui, Elyas and Keisler, Julie and Charantonis, Anastase},
   year    = {2026},
