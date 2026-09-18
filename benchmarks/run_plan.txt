@@ -1,0 +1,9 @@
+# One run per line:  engine|target|config[|label[|data.csv]]
+# engine ∈ {dragonsr, pysr}; target ∈ Nguyen n1–n12, physics laws, Sentinel-2 indices (see README)
+# Launch with:  python benchmarks/run_batch.py --plan-file benchmarks/run_plan.txt
+#
+# Example: two DragonSR targets on the quick budget, then two PySR baselines
+dragonsr|n5|configs/dragonsr_quick.txt
+dragonsr|schechter|configs/dragonsr_quick.txt
+pysr|schechter|configs/pysr_quick.txt
+pysr|kepler|configs/pysr_quick.txt

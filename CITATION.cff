@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use DragonSR, please cite the paper below."
+title: "DragonSR: Directed Acyclic Graph Search for Equation Discovery"
+authors:
+  - family-names: Chikhaoui
+    given-names: Elyas
+  - family-names: Keisler
+    given-names: Julie
+  - family-names: Charantonis
+    given-names: Anastase
+year: 2026
+repository-code: "https://github.com/how2222/dragonsr"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22146752
+    description: "Run-level experimental outputs"
+license: CeCILL-C

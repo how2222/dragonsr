@@ -1,0 +1,13 @@
+# Equivalent to `pip install -e .` ; pin with `pip install -e ".[paper]"` to reproduce the paper.
+numpy
+pandas
+torch
+graphviz
+scikit-learn
+xgboost
+pygam
+sympy
+matplotlib
+plotly
+# optional, for the PySR baseline:
+# pysr>=1.5

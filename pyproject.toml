@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dragonsr"
+version = "0.1.0"
+description = "DragonSR: symbolic regression as directed-acyclic-graph search, with a DragonSR/PySR benchmark pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE.txt" }
+authors = [
+  { name = "Elyas Chikhaoui", email = "elyas.chikhaoui@telecom-paris.fr" },
+]
+keywords = ["symbolic regression", "equation discovery", "neural architecture search", "DAG", "DRAGON"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "torch",
+  "graphviz",
+  "scikit-learn",
+  "xgboost",
+  "pygam",
+  "sympy",
+  "matplotlib",
+  "plotly",
+]
+
+[project.optional-dependencies]
+# PySR is only needed for the DragonSR-vs-PySR comparison; it installs Julia on first use.
+pysr = ["pysr>=1.5"]
+# Exact versions used for the paper's runs.
+paper = [
+  "numpy==2.0.2", "pandas==2.3.3", "torch==2.8.0", "graphviz==0.21",
+  "scikit-learn==1.6.1", "xgboost==2.1.4", "pygam==0.10.1", "matplotlib==3.9.4",
+  "plotly==6.8.0", "sympy==1.14.0", "pysr==1.5.10",
+]
+
+[project.scripts]
+dragonsr = "dragonsr.main:cli"
+
+[project.urls]
+Paper = "https://github.com/how2222/dragonsr/blob/main/paper/DragonSR.pdf"
+"Run-level results (Zenodo)" = "https://doi.org/10.5281/zenodo.22146752"
+"Upstream library (DRAGON)" = "https://github.com/JulieKeisler/DRAGON"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dragon*", "dragonsr*"]
+exclude = ["benchmarks*", "examples*", "paper*"]
+
+[tool.setuptools.package-data]
+dragonsr = ["data/*.csv"]

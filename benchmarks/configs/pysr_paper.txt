@@ -1,0 +1,19 @@
+# PySR baseline, paper budget (targets are set by the run plan)
+N_RUNS = 10
+INIT_STRATEGIES = random
+NOISE_STD = 0.01
+
+# Dragon knobs kept harmless if this file is used with --run_dragonsr by mistake
+N_ITERATIONS = 1
+K_INIT = 1
+T_PER_LEVEL = 1
+
+# PySR-specific knobs (PySR. prefix)
+PySR.N_ITERATIONS = 2000
+PySR.POPULATIONS = 5
+PySR.POPULATION_SIZE = 120
+PySR.ADD_NOISE = true
+PySR.SHOULD_OPTIMIZE_CONSTANTS = true
+PySR.MAXSIZE = 30
+PySR.BINARY_OPS = +,-,*,/
+PySR.UNARY_OPS = log,exp,sin,cos,sqrt,abs
